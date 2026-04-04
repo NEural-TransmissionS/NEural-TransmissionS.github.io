@@ -1,0 +1,168 @@
+///
+/// Editorial by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Banner */
+
+	#banner {
+		@include padding(6em, 0);
+		@include vendor('display', 'flex');
+
+		h1 {
+			margin-top: -0.125em;
+		}
+
+		.content {
+			@include vendor('flex-grow', '1');
+			@include vendor('flex-shrink', '1');
+			width: 50%;
+		}
+
+		.image {
+			@include vendor('flex-grow', '0');
+			@include vendor('flex-shrink', '0');
+			display: block;
+			margin: 0 0 _size(element-margin) (_size(element-margin) * 2);
+			width: 50%;
+
+			img {
+				height: 100%;
+				-moz-object-fit: cover;
+				-webkit-object-fit: cover;
+				-ms-object-fit: cover;
+				object-fit: cover;
+				-moz-object-position: center;
+				-webkit-object-position: center;
+				-ms-object-position: center;
+				object-position: center;
+				width: 100%;
+			}
+		}
+
+		@include orientation(portrait) {
+			@include vendor('flex-direction', 'column-reverse');
+
+			h1 {
+				br {
+					display: none;
+				}
+			}
+
+			.content {
+				@include vendor('flex-grow', '0');
+				@include vendor('flex-shrink', '0');
+				width: 100%;
+			}
+
+			.image {
+				@include vendor('flex-grow', '0');
+				@include vendor('flex-shrink', '0');
+				margin: 0 0 (_size(element-margin) * 2) 0;
+				height: 25em;
+				max-height: 50vh;
+				min-height: 18em;
+				width: 100%;
+			}
+
+			@include breakpoint('<=xsmall') {
+				.image {
+					max-height: 35vh;
+				}
+			}
+		}
+	}
+
+/* Banner Hero */
+
+		.banner-hero {
+			position: relative;
+			overflow: hidden;
+			height: 28vh;
+			min-height: 190px;
+			max-height: 300px;
+			margin-top: 0.5rem;
+			margin-bottom: 0.6em;
+			box-shadow: 0 18px 48px rgba(0, 0, 0, 0.22);
+
+		.banner-bg {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center center;
+			z-index: 1;
+		}
+
+		.banner-overlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(to right, rgba(0, 0, 0, 0.24) 0%, rgba(0, 0, 0, 0.1) 42%, rgba(0, 0, 0, 0.18) 100%);
+			z-index: 2;
+		}
+
+		.banner-content {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			padding: 0;
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			z-index: 3;
+			max-width: 76%;
+		}
+
+		.banner-logo {
+			width: min(68vw, 68rem);
+			max-width: 100%;
+			height: auto;
+			transform: translateX(-7%);
+			filter: drop-shadow(0 0 0.35rem rgba(255, 255, 255, 0.82)) drop-shadow(0 0 1.6rem rgba(255, 255, 255, 0.14)) drop-shadow(0 0 1.4rem rgba(0, 0, 0, 0.58)) drop-shadow(0 0 2.6rem rgba(0, 0, 0, 0.34));
+		}
+
+		@include breakpoint('<=medium') {
+			height: 24vh;
+			min-height: 170px;
+			max-height: 240px;
+
+			.banner-content {
+				padding: 0;
+				max-width: 84%;
+				justify-content: flex-start;
+			}
+
+			.banner-logo {
+				transform: translateX(-5%);
+			}
+
+			.banner-overlay {
+				background: linear-gradient(to bottom, rgba(0, 0, 0, 0.14) 0%, rgba(0, 0, 0, 0.22) 100%);
+			}
+		}
+
+		@include breakpoint('<=small') {
+			height: 20vh;
+			min-height: 150px;
+			max-height: 200px;
+			margin-top: 0.35rem;
+			margin-bottom: 0.35em;
+
+			.banner-content {
+				padding: 0;
+				max-width: 94%;
+			}
+
+			.banner-logo {
+				transform: translateX(-4%);
+			}
+		}
+	}

@@ -1,0 +1,223 @@
+///
+/// Editorial by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Main */
+
+	#main {
+		@include vendor('flex-grow', '1');
+		@include vendor('flex-shrink', '1');
+		width: 100%;
+
+		> .inner {
+			@include padding(0, 3em);
+			margin: 0 auto;
+			max-width: 110em;
+
+			> section {
+				@include padding(6em, 0);
+				border-top: solid 2px _palette(border);
+
+				&:first-of-type {
+				 	border-top: 0 !important;
+				}
+			}
+		}
+
+		@include breakpoint('<=xlarge') {
+			> .inner {
+				@include padding(0, 2.5em);
+
+				> section {
+					@include padding(5em, 0);
+				}
+			}
+		}
+
+		@include breakpoint('<=large') {
+			> .inner {
+				@include padding(0, 2.25em);
+
+				> section {
+					@include padding(4em, 0);
+				}
+			}
+		}
+
+		@include breakpoint('<=small') {
+			> .inner {
+				@include padding(0, 2em);
+
+				> section {
+					@include padding(3em, 0);
+				}
+			}
+		}
+	}
+
+	.people-page h3 {
+		margin-top: 0;
+	}
+
+	.people-grid {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 1.75rem;
+		margin: 0 0 2.5rem 0;
+	}
+
+	.person-card {
+		display: grid;
+		grid-template-columns: 9.5rem minmax(0, 1fr);
+		gap: 1.25rem;
+		align-items: start;
+		padding: 1.4rem;
+		border: 1px solid var(--nets-border);
+		background: linear-gradient(180deg, rgba(14, 20, 30, 0.96) 0%, rgba(9, 13, 20, 0.96) 100%);
+		box-shadow: 0 18px 40px rgba(0, 0, 0, 0.2);
+	}
+
+	.person-card-image img {
+		display: block;
+		width: 100%;
+		height: 9.5rem;
+		object-fit: contain;
+		object-position: center center;
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		background: rgba(255, 255, 255, 0.02);
+	}
+
+	.person-card-body > :last-child {
+		margin-bottom: 0;
+	}
+
+	.person-card-group,
+	.person-dialog-group {
+		margin: 0 0 0.45rem 0;
+		color: var(--nets-accent);
+		font-size: 0.78rem;
+		font-weight: 700;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+	}
+
+	.person-card h4 {
+		margin: 0 0 0.35rem 0;
+		font-size: 1.2rem;
+	}
+
+	.person-card-role,
+	.person-dialog-role {
+		margin: 0 0 0.8rem 0;
+		color: var(--nets-text-muted);
+		font-weight: 600;
+	}
+
+	.person-card .actions.small {
+		margin-top: 1rem;
+	}
+
+	.person-card .actions.small .button,
+	.person-dialog .button {
+		min-width: 0;
+	}
+
+	.person-dialog {
+		width: min(52rem, calc(100vw - 2rem));
+		padding: 0;
+		border: 1px solid var(--nets-border);
+		background: transparent;
+		color: #ffffff;
+	}
+
+	.person-dialog::backdrop {
+		background: rgba(1, 3, 7, 0.82);
+		backdrop-filter: blur(6px);
+	}
+
+	.person-dialog-shell {
+		position: relative;
+		display: grid;
+		grid-template-columns: 16rem minmax(0, 1fr);
+		gap: 0;
+		overflow: hidden;
+		background: linear-gradient(180deg, #0b1118 0%, #06090e 100%);
+	}
+
+	.person-dialog-media img {
+		display: block;
+		width: 100%;
+		height: 9.5rem;
+		object-fit: contain;
+		object-position: center center;
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		background: rgba(255, 255, 255, 0.02);
+	}
+
+	.person-dialog-copy {
+		padding: 2rem 2rem 1.5rem;
+	}
+
+	.person-dialog-copy h2 {
+		margin: 0 0 0.4rem 0;
+		font-size: 1.9rem;
+	}
+
+	.person-dialog-close {
+		position: absolute;
+		top: 0.85rem;
+		right: 0.95rem;
+		z-index: 2;
+		width: 2.25rem;
+		height: 2.25rem;
+		border: 0;
+		border-radius: 999px;
+		background: rgba(255, 255, 255, 0.08);
+		color: #ffffff;
+		cursor: pointer;
+		font-size: 1.4rem;
+		line-height: 1;
+	}
+
+	.person-dialog-close:hover {
+		background: rgba(255, 255, 255, 0.14);
+	}
+
+	@include breakpoint('<=medium') {
+		.people-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	@include breakpoint('<=small') {
+		#main > .inner {
+			padding-left: 1.15em;
+			padding-right: 1.15em;
+		}
+
+		.person-card {
+			grid-template-columns: 1fr;
+		}
+
+		.person-card-image {
+			max-width: 13rem;
+		}
+
+		.person-dialog-shell {
+			grid-template-columns: 1fr;
+		}
+
+		.person-dialog-media img {
+			height: 9.5rem;
+		}
+
+		.person-dialog-copy {
+			padding: 1.5rem 1.25rem 1.25rem;
+		}
+
+		.person-dialog-copy h2 {
+			font-size: 1.45rem;
+		}
+	}

@@ -1,0 +1,352 @@
+<!DOCTYPE HTML>
+<!--
+	Based on Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license
+-->
+<html>
+	<head>
+		<title>Research | NETS Lab</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Research themes, projects, and publication streams in the NEural TransmissionS (NETS) Lab." />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<div id="wrapper">
+
+			<div id="main">
+				<div class="inner">
+
+					<header id="header">
+						<a href="index.html" class="logo">
+							<strong>NETS Lab</strong>
+							<span>Space Perception, Explainable AI, and Applied ML</span>
+						</a>
+						<ul class="icons">
+							<li><a href="https://www.fit.edu/faculty-profiles/w/white-ryan/" class="icon solid fa-university"><span class="label">Faculty Profile</span></a></li>
+							<li><a href="https://scholar.google.com/citations?hl=en&user=SHsJP3cAAAAJ&view_op=list_works" class="icon solid fa-graduation-cap"><span class="label">Google Scholar</span></a></li>
+							<li><a href="https://github.com/NEural-TransmissionS" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="https://www.linkedin.com/in/ryan-white-326301b/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						</ul>
+					</header>
+
+					<ul class="actions mobile-home-nav">
+						<li><a href="about.html" class="button small">About</a></li>
+						<li><a href="research.html" class="button small">Research</a></li>
+						<li><a href="research.html#representative-projects" class="button small">Projects</a></li>
+						<li><a href="research.html#all-publications" class="button small">Publications</a></li>
+						<li><a href="people.html" class="button small">People</a></li>
+						<li><a href="join.html" class="button small">Join</a></li>
+						<li><a href="contact.html" class="button small">Contact</a></li>
+					</ul>
+
+					<section class="banner-hero" aria-hidden="true">
+						<img src="images/nets-banner-bg.png" class="banner-bg" alt="" />
+						<div class="banner-overlay"></div>
+						<div class="banner-content">
+							<img src="images/nets-banner-white.png" alt="" class="banner-logo" />
+						</div>
+					</section>
+
+					<section class="page-intro">
+						<header class="main">
+							<h1>Research</h1>
+						</header>
+
+						<p>
+							NETS Lab organizes its work around a small number of connected research programs. Rather than treating theory, modeling, and deployment as separate activities, the lab uses each to inform the others: we build methods, stress them in realistic environments, and study what makes them reliable and interpretable.
+						</p>
+
+						<p>
+							Each section below highlights a research theme, the kinds of projects it supports, and a reverse-chronological paper list that gives a sense of the work connected to that area.
+						</p>
+
+						<hr class="major" />
+
+						<h2 id="space-perception">Space Perception and Autonomy</h2>
+						<p>
+							A major application area for the lab is space-based perception: inspection, tracking, navigation, and 3D understanding of spacecraft in difficult orbital environments. This includes systems that must operate onboard under strict compute, sensing, and reliability constraints, as well as methods that support rendezvous, servicing, and characterization of non-cooperative targets.
+						</p>
+						<p>
+							3D reconstruction is treated here as part of perception rather than as a separate theme. The same vision stack that supports detection, localization, and scene understanding also supports geometry, structure recovery, and downstream autonomy.
+						</p>
+
+						<h3>Research streams</h3>
+						<p>
+							<strong>Perception models.</strong> We develop core vision models for object detection, component recognition, tracking, and scene understanding in orbital imagery. This includes work on model robustness, dataset design, and architectures tailored to space-domain targets.
+						</p>
+						<p>
+							<strong>Inspection, pose, and 3D reconstruction.</strong> A second thread focuses on understanding spacecraft geometry and state through perception, including 3D reconstruction, pose-aware vision, and inspection workflows for non-cooperative resident space objects.
+						</p>
+						<p>
+							<strong>Onboard and low-SWaP deployment.</strong> We study what it takes to move these methods into flight-relevant settings, including efficient models, FPGA and embedded implementations, and comparisons across commercial off-the-shelf small computing platforms.
+						</p>
+						<p>
+							<strong>Autonomous experimentation.</strong> The lab also pushes toward real-world autonomy through synchronized sensing setups, experimental test stands, satellite mockups, and lab flight-style testing that connects perception to decision-making in realistic closed-loop conditions.
+						</p>
+
+						<h3>Current directions</h3>
+						<ul>
+							<li>Spacecraft inspection, tracking, and component recognition</li>
+							<li>3D reconstruction, inspection, and pose-aware perception pipelines</li>
+							<li>Onboard and low-SWaP vision systems for orbital missions</li>
+							<li>Relative navigation and autonomy around non-cooperative resident space objects</li>
+							<li>Embedded deployment and COTS small-compute comparisons</li>
+							<li>Real-world experimental systems that bridge simulation and physical testing</li>
+						</ul>
+
+						<p><strong>2026.</strong> A. Issitt, T. Mahendrakar, and R. T. White. “Reliable Onboard 3D Reconstruction of Unknown Spacecraft via Data Acquisition Guided by Orbital Geometry and Lighting.” <em>AIAA SCITECH 2026 Forum</em>.</p>
+						<p><strong>2026.</strong> N. Welsh, L. J. Shikhman, M. N. Attzs, S. K. Putane, V. M. Nguyen, and R. T. White. “Post-Launch Capability Expansion of Vision-Language Models via Prompting for On-Orbit Spacecraft Inspection.” <em>CVPR 2026 Workshop AI4Space</em>.</p>
+						<p><strong>2025.</strong> A. Issitt, T. Mahendrakar, A. Alvarez, R. T. White, and A. Sizemore. “On Optimal Observation Orbits for Learning Gaussian Splatting-Based 3D Models of Unknown Resident Space Objects.” <em>AIAA SCITECH 2025 Forum</em>.</p>
+						<details>
+							<summary>Show More Papers</summary>
+							<p><strong>2025.</strong> M. J. Meni, B. Gisclair, R. T. White, and T. Mahendrakar. “PEEK-Guided Neural Network Pruning for Deployment on Low SWaP Hardware.” <em>39th Annual Small Satellite Conference</em>.</p>
+							<p><strong>2025.</strong> E. R. Sandidge, T. Mahendrakar, and R. T. White. “Applying 3D Gaussian Splatting-Based Object Detection Ensembles for Satellite Component Identification.” <em>Joint Mathematics Meetings 2025</em>.</p>
+							<p><strong>2024.</strong> T. Mahendrakar, R. T. White, and M. Tiwari. “SpY: A Context-Based Approach to Spacecraft Component Detection.” <em>CoRR</em> abs/2406.18709.</p>
+							<p><strong>2024.</strong> V. M. Nguyen, E. Sandidge, T. Mahendrakar, and R. T. White. “Satsplatyolo: 3D Gaussian Splatting-Based Virtual Object Detection Ensembles for Satellite Feature Recognition.” <em>CoRR</em> abs/2406.02533.</p>
+							<p><strong>2024.</strong> T. Mahendrakar, R. T. White, M. Tiwari, and M. Wilde. “Unknown Non-Cooperative Spacecraft Characterization with Lightweight Convolutional Neural Networks.” <em>Journal of Aerospace Information Systems</em> 21(5): 455-460.</p>
+							<p><strong>2023.</strong> T. Mahendrakar, R. T. White, M. Wilde, and M. Tiwari. “SpaceYOLO: A Human-Inspired Model for Real-time, On-board Spacecraft Feature Detection.” <em>IEEE Aerospace Conference</em>.</p>
+							<p><strong>2023.</strong> A. Ekblad, T. Mahendrakar, R. T. White, M. Wilde, I. Silver, and B. Wheeler. “Resource-constrained FPGA Design for Satellite Component Feature Extraction.” <em>IEEE Aerospace Conference</em>.</p>
+							<p><strong>2023.</strong> M. N. J. Attzs, T. Mahendrakar, M. J. Meni, R. T. White, and I. Silver. “Comparison of Tracking-By-Detection Algorithms for Real-Time Satellite Component Tracking.” <em>37th Annual Small Satellite Conference</em>.</p>
+							<p><strong>2023.</strong> T. Mahendrakar, M. N. Attzs, J. M. Duarte, A. L. Tisaranni, R. T. White, and M. Wilde. “Impact of Intra-Class Variance on YOLOv5 Model Performance for Autonomous Navigation around Non-Cooperative Targets.” <em>AIAA SCITECH 2023 Forum</em>.</p>
+							<p><strong>2023.</strong> B. Caruso, T. Mahendrakar, V. M. Nguyen, R. T. White, and T. Steffen. “3D Reconstruction of Non-Cooperative Resident Space Objects Using Instant NGP-Accelerated NeRF and D-NeRF.” <em>AAS/AIAA Spaceflight Mechanics Conference</em>.</p>
+							<p><strong>2023.</strong> T. Mahendrakar, S. Holmberg, A. Ekblad, E. Conti, R. T. White, M. Wilde, and I. Silver. “Autonomous Rendezvous with Non-Cooperative Target Objects with Swarm Chasers and Observers.” <em>AAS/AIAA Spaceflight Mechanics Conference</em>.</p>
+							<p><strong>2022.</strong> T. Mahendrakar, M. Wilde, R. T. White, et al. “Performance Study of YOLOv5 and Faster R-CNN for Autonomous Navigation around Non-Cooperative Targets.” <em>IEEE Aerospace Conference</em>.</p>
+							<p><strong>2021.</strong> T. Mahendrakar, R. T. White, M. Wilde, A. Rivkin, J. Cutler, K. Watkins, A. Ekblad, and N. Fischer. “Use of Artificial Intelligence for Feature Recognition and Flightpath Planning around Non-Cooperative Resident Space Objects.” <em>AIAA ASCEND</em>.</p>
+							<p><strong>2021.</strong> T. Mahendrakar, R. T. White, and M. Wilde. “Real-Time Satellite Component Recognition with YOLOv5.” <em>35th Annual Small Satellite Conference</em>.</p>
+							<p><strong>Manuscript in progress.</strong> S. Holmberg, A. Issitt, T. Mahendrakar, A. Sizemore, and R. T. White. “Closed-Loop Vision-Based Autonomous Docking for Unknown Spacecraft in a Physically Grounded Orbital Digital Twin.”</p>
+							<p><strong>Manuscript in progress.</strong> T. Mahendrakar, S. Holmberg, R. T. White, and A. Sizemore. “Autonomous Swarm Rendezvous with Unknown Non-Cooperative Spacecraft.”</p>
+						</details>
+
+						<hr class="major" />
+
+						<h2 id="xai-representations">Explainable AI and Neural Representations</h2>
+						<p>
+							A second core theme asks what models are actually learning and how that internal structure can be controlled. The lab studies explainable AI, latent structure, entropy flow through deep networks, regularization-driven representation shaping, ensemble diversity, and methods for extracting patterns that generalize across tasks and conditions.
+						</p>
+						<p>
+							This area is where the lab’s mathematics background shows up most directly: not only in analyzing learned systems, but in designing objectives and constraints that guide them toward more useful internal behavior.
+						</p>
+
+						<h3>Current directions</h3>
+						<ul>
+							<li>Entropy-aware training and information flow in deep networks</li>
+							<li>Interpretable and controllable latent structure</li>
+							<li>Diverse representations for ensembles and transfer</li>
+							<li>Methods for identifying robust, generalizable patterns in neural representations</li>
+						</ul>
+
+						<p><strong>2026.</strong> A. Issitt, A. Merino, L. Deen, R. T. White, and M. J. Meni. “Uncovering Neural Learning Dynamics Through Latent Mutual Information.” <em>Entropy</em> 28(1), 118.</p>
+						<p><strong>2025.</strong> M. J. Meni, T. Mahendrakar, O. D. M. Raney, R. T. White, M. L. Mayo, and K. R. Pilkiewicz. “Probabilistic Explanations for Entropic Knowledge Extraction for Automated Satellite Component Detection.” <em>Journal of Aerospace Information Systems</em> 22(4): 296-309.</p>
+						<p><strong>2024.</strong> M. J. Meni, R. T. White, M. L. Mayo, and K. R. Pilkiewicz. “Entropy-Based Guidance of Deep Neural Networks for Accelerated Convergence and Improved Performance.” <em>Information Sciences</em> 681: 121239.</p>
+						<details>
+							<summary>Show More Papers</summary>
+							<p><strong>2024.</strong> M. J. Meni, T. Mahendrakar, O. D. Raney, R. T. White, M. L. Mayo, and K. R. Pilkiewicz. “Taking a PEEK into YOLOv5 for Satellite Component Recognition via Entropy-Based Visual Explanations.” <em>AIAA SCITECH 2024 Forum</em>.</p>
+							<p><strong>2023.</strong> M. J. Meni, R. T. White, M. L. Mayo, and K. Pilkiewicz. “Entropy-Based Guidance of Deep Neural Networks for Accelerated Convergence and Improved Performance.” <em>CoRR</em> abs/2308.14938.</p>
+							<p><strong>Submitted.</strong> M. J. Meni, B. Gisclair, M. Niwas, and R. T. White. “PEEK Variance: An Information-Theoretic Metric Unifying Interpretability, Optimization, and Efficiency in Deep Neural Networks.” <em>Submitted to NeurIPS</em>.</p>
+						</details>
+
+						<hr class="major" />
+
+						<h2 id="digital-twins">Digital Twins and Synthetic Sensing</h2>
+						<p>
+							The lab develops digital-twin environments to accelerate vision and autonomy research before moving into physical experiments. These environments support orbital motion, synchronized observers, controllable cameras, synthetic sensor feeds, component annotation, and mixed real/sim pipelines that help the lab iterate quickly while preserving experimental realism.
+						</p>
+						<p>
+							This work connects modeling and deployment directly: the same systems that support controlled synthetic experiments are also used to inform test stands, satellite mockups, and real-sensor experiments.
+						</p>
+
+						<h3>Current directions</h3>
+						<ul>
+							<li>LEO-to-GEO digital twins for orbital motion and observation</li>
+							<li>Controllable synthetic sensor feeds and synchronized observers</li>
+							<li>Auto-annotation pipelines for detection and segmentation</li>
+							<li>Mixed real/sim sensing and physical testbed development</li>
+						</ul>
+
+						<p><strong>2026.</strong> A. Issitt, T. Mahendrakar, and R. T. White. “Reliable Onboard 3D Reconstruction of Unknown Spacecraft via Data Acquisition Guided by Orbital Geometry and Lighting.” <em>AIAA SCITECH 2026 Forum</em>.</p>
+						<p><strong>2026.</strong> A. Issitt, E. Happy, E. Clark, M. J. Meni, and R. T. White. “Assessing the Predictive Value of Physics-Grounded Synthetic Data for Computer Vision in Space Environments.” <em>Submitted to CVPR 2026 Workshop SynData4CV</em>.</p>
+						<p><strong>2025.</strong> A. Issitt, T. Mahendrakar, A. Alvarez, R. T. White, and A. Sizemore. “On Optimal Observation Orbits for Learning Gaussian Splatting-Based 3D Models of Unknown Resident Space Objects.” <em>AIAA SCITECH 2025 Forum</em>.</p>
+						<details>
+							<summary>Show More Papers</summary>
+							<p><strong>2025.</strong> E. R. Sandidge, T. Mahendrakar, and R. T. White. “Applying 3D Gaussian Splatting-Based Object Detection Ensembles for Satellite Component Identification.” <em>Joint Mathematics Meetings 2025</em>.</p>
+							<p><strong>2025.</strong> A. Issitt, T. Mahendrakar, A. Alvarez, R. T. White, and A. Sizemore. “Inspection Orbit Selection for Gaussian Splatting-Based 3D Reconstruction of Unknown RSOs.” <em>Submitted to AIAA Journal of Spacecraft and Rockets</em>.</p>
+							<p><strong>2024.</strong> T. Mahendrakar, R. T. White, and M. Tiwari. “SpY: A Context-Based Approach to Spacecraft Component Detection.” <em>CoRR</em> abs/2406.18709.</p>
+							<p><strong>2024.</strong> V. M. Nguyen, E. Sandidge, T. Mahendrakar, and R. T. White. “Satsplatyolo: 3D Gaussian Splatting-Based Virtual Object Detection Ensembles for Satellite Feature Recognition.” <em>CoRR</em> abs/2406.02533.</p>
+							<p><strong>2023.</strong> B. Caruso, T. Mahendrakar, V. M. Nguyen, R. T. White, and T. Steffen. “3D Reconstruction of Non-Cooperative Resident Space Objects Using Instant NGP-Accelerated NeRF and D-NeRF.” <em>AAS/AIAA Spaceflight Mechanics Conference</em>.</p>
+							<p><strong>2023.</strong> T. Mahendrakar, R. T. White, M. Wilde, and M. Tiwari. “SpaceYOLO: A Human-Inspired Model for Real-Time, On-Board Spacecraft Feature Detection.” <em>IEEE Aerospace Conference</em>.</p>
+							<p><strong>2023.</strong> A. Ekblad, T. Mahendrakar, R. T. White, M. Wilde, I. Silver, and B. Wheeler. “Resource-Constrained FPGA Design for Satellite Component Feature Extraction.” <em>IEEE Aerospace Conference</em>.</p>
+							<p><strong>Manuscript in progress.</strong> S. Holmberg, A. Issitt, T. Mahendrakar, A. Sizemore, and R. T. White. “Closed-Loop Vision-Based Autonomous Docking for Unknown Spacecraft in a Physically Grounded Orbital Digital Twin.”</p>
+						</details>
+
+						<hr class="major" />
+
+						<h2 id="scientific-ml">Scientific and Engineering Machine Learning</h2>
+						<p>
+							NETS also works on collaborative machine learning projects in science and engineering beyond the space domain. These efforts are typically partner-driven and involve adapting methods to settings where data are messy, goals are domain-specific, and interpretation matters as much as predictive performance.
+						</p>
+						<p>
+							Examples include work in aerospace engineering, aviation requirements and safety analysis, computational biology, coastal and environmental systems, and other data-rich scientific settings.
+						</p>
+
+						<h3>Current directions</h3>
+						<ul>
+							<li>Domain-adapted machine learning for science and engineering workflows</li>
+							<li>Natural language models for aviation and aerospace requirements analysis</li>
+							<li>Applied learning systems for biology, environmental science, and related areas</li>
+							<li>Collaborative projects that connect mathematical insight to deployment constraints</li>
+						</ul>
+
+						<p><strong>2025.</strong> M. P. Cote, M. E. Splitt, S. M. Lazarus, R. T. White, and C. G. Baker. “Ground-Based Cloud Type Classification for Aviation Weather Hazard Detection Using Deep Learning.” <em>IEEE Access</em> 13: 203027-203040.</p>
+						<p><strong>2025.</strong> R. E. White, M. Mattei, B. Diaz, S. Kaden, M. Brenner, E. Smith, M. A. H. Khan, et al. “Reconstruction of 3D Vascular Flow Patterns from Sparse Angiographic Data Using a 3D Convolutional Neural Network.” <em>Medical Imaging 2025: Clinical and Biomedical Imaging</em> 13410: 284-294.</p>
+						<p><strong>2025.</strong> M. Mattei, A. Issitt, M. A. Khan, B. Diaz, R. White, and V. Chivukula. “Predicting Cardiac Flow Patterns Using a Novel Hemodynamic Neural Network for LVAD Therapy Planning and Evaluation.” <em>The Journal of Heart and Lung Transplantation</em> 44(4): S133-S134.</p>
+						<details>
+							<summary>Show More Papers</summary>
+							<p><strong>2025.</strong> J. Park, J. A. Czocher, and R. T. White. “Exploring STEM Students’ Model Validation across Two Data-Rich Task Environments.” <em>International Journal of Science and Mathematics Education</em> 23(8): 3181-3204.</p>
+							<p><strong>2023.</strong> B. M. Nagda, V. M. Nguyen, and R. T. White. “promSEMBLE: Hard Pattern Mining and Ensemble Learning for Detecting DNA Promoter Sequences.” <em>IEEE/ACM Transactions on Computational Biology and Bioinformatics</em>.</p>
+							<p><strong>2023.</strong> A. Tikayat Ray, O. J. Pinon-Fischer, D. N. Mavris, R. T. White, and B. F. Cole. “aeroBERT-NER: Named-Entity Recognition for Aerospace Requirements Engineering Using BERT.” <em>AIAA SCITECH Forum</em>.</p>
+							<p><strong>2023.</strong> A. Tikayat Ray, B. F. Cole, O. J. Pinon-Fischer, R. T. White, and D. N. Mavris. “aeroBERT-Classifier: Classification of Aerospace Requirements Using BERT.” <em>Aerospace</em> 10(3): 279.</p>
+							<p><strong>2023.</strong> A. Despeignes, A. Sharma, R. Beltran, S. Rech, M. Gilligan, K. Hunsucker, R. T. White, and N. N. Kachouie. “The Impact of Benthic Organisms to Improve Water Quality in the Indian River Lagoon, Florida.” <em>Water, Air, &amp; Soil Pollution</em> 234: 546.</p>
+							<p><strong>2023.</strong> A. Tikayat Ray, B. F. Cole, O. J. Pinon-Fischer, A. P. Bhat, R. T. White, and D. N. Mavris. “Agile Methodology for the Standardization of Engineering Requirements Using Large Language Models.” <em>Systems</em> 11(7): 352.</p>
+							<p><strong>2023.</strong> A. Tikayat Ray, A. P. Bhat, R. T. White, V. M. Nguyen, O. J. Pinon-Fischer, et al. “Examining the Potential of Generative Language Models for Aviation Safety Analysis: Case Study and Insights Using the Aviation Safety Reporting System.” <em>Aerospace</em> 10(9): 770.</p>
+							<p><strong>2024.</strong> A. Tikayat Ray, O. J. Pinon-Fischer, R. T. White, B. F. Cole, and D. N. Mavris. “Development of a Language Model for Named-Entity Recognition in Aerospace Requirements.” <em>Journal of Aerospace Information Systems</em> 21(6): 489-499.</p>
+							<p><strong>2024.</strong> E. Robbins, R. D. Breininger, M. Jiang, M. Madera, R. T. White, and N. N. Kachouie. “Segmentation of Glacier Area Using U-Net through Landsat Satellite Imagery for Quantification of Glacier Recession and Its Impact on Marine Systems.” <em>Journal of Marine Science and Engineering</em> 12(10): 1788.</p>
+							<p><strong>2022.</strong> M. Gilligan, K. Hunsucker, S. Rech, A. Sharma, R. Beltran, R. T. White, and R. Weaver. “Assessing the Biological Performance of Living Docks: A Citizen Science Initiative to Improve Coastal Water Quality Through Benthic Recruitment within the Indian River Lagoon, Florida.” <em>Journal of Marine Science and Engineering</em> 10(6): 823.</p>
+							<p><strong>Manuscript in progress.</strong> E. Happy, M. Splitt, R. T. White, and B. Caldwell. “Spatial Bias in Airport Assignment: Limitations of the Nearest-Airport Approach for General Aviation.”</p>
+							<p><strong>Abstract submitted.</strong> E. Happy, R. T. White, and M. Splitt. “Masked Graph Neural Networks for Multi-Task Aviation Weather Prediction.” <em>AIAA SCITECH Forum 2027</em>.</p>
+							<p><strong>2021.</strong> R. White and A. Tikayat Ray. <em>Practical Discrete Mathematics</em>.</p>
+						</details>
+
+						<hr class="major" />
+
+						<h2 id="stochastic-systems">Applied Probability and Stochastic Systems</h2>
+						<p>
+							The broader research program also includes earlier and ongoing work in applied probability, stochastic analysis, random walks, reliability, queueing, and related mathematical systems. This work remains part of the intellectual foundation of the lab, especially in how it approaches uncertainty, dynamics, and mathematically structured modeling.
+						</p>
+
+						<p><strong>2024.</strong> J. H. Dshalalow, H. Aljahani, and R. T. White. “Dependent Competing Failure Processes in Reliability Systems.” <em>Entropy</em> 26(6): 444.</p>
+						<p><strong>2022.</strong> J. H. Dshalalow and R. T. White. “Fluctuation Analysis of a Soft-Extreme Shock Reliability Model.” <em>Mathematics</em> 10(18): 3312.</p>
+						<p><strong>2022.</strong> R. T. White. “On the Exiting Patterns of Multivariate Renewal-Reward Processes with an Application to Stochastic Networks.” <em>Symmetry</em> 14(6): 1167.</p>
+						<details>
+							<summary>Show More Papers</summary>
+							<p><strong>2022.</strong> J. H. Dshalalow and R. T. White. “First Passage Analysis in a Queue with State Dependent Vacations.” <em>Axioms</em> 11(11): 582.</p>
+							<p><strong>2021.</strong> J. H. Dshalalow, K. M. Nandyose, and R. T. White. “Time Sensitive Analysis of Antagonistic Stochastic Processes with Applications to Finance and Queueing.” <em>Mathematics and Statistics</em> 9(4): 481-500.</p>
+							<p><strong>2021.</strong> J. H. Dshalalow and R. T. White. “Current Trends in Random Walks on Random Lattices.” <em>Mathematics</em> 9(10): 1148.</p>
+							<p><strong>2021.</strong> J. H. Dshalalow and R. T. White. “Random Walk Analysis in a Reliability System under Constant Degradation and Random Shocks.” <em>Axioms</em> 10(3): 199.</p>
+							<p><strong>2020.</strong> R. T. White and J. H. Dshalalow. “Characterizations of Random Walks on Random Lattices and Their Ramifications.” <em>Stochastic Analysis and Applications</em> 38(2): 307-342.</p>
+							<p><strong>2020.</strong> J. H. Dshalalow, A. Merie, and R. T. White. “Fluctuation Analysis in Parallel Queues with Hysteretic Control.” <em>Methodology and Computing in Applied Probability</em> 22: 295-327.</p>
+							<p><strong>2016.</strong> J. H. Dshalalow and R. T. White. “Time Sensitive Analysis of Independent and Stationary Increment Processes.” <em>Journal of Mathematical Analysis and Applications</em> 443(2): 817-833.</p>
+							<p><strong>2015.</strong> R. T. White. <em>Random Walks on Random Lattices and Their Applications</em>. PhD thesis, Florida Institute of Technology.</p>
+							<p><strong>2014.</strong> J. H. Dshalalow and R. T. White. “On Strategic Defense in Stochastic Networks.” <em>Stochastic Analysis and Applications</em> 32(3): 365-396.</p>
+							<p><strong>2013.</strong> J. H. Dshalalow and R. T. White. “On Reliability of Stochastic Networks.” <em>Neural, Parallel, and Scientific Computations</em> 21: 141-160.</p>
+						</details>
+
+						<hr class="major" />
+
+						<h2 id="representative-projects">Representative Projects</h2>
+						<p>
+							Across these themes, the lab runs a mix of long-horizon research threads, project-based collaborations, and experimental system-building efforts. The projects below reflect the kinds of integrated problems NETS is designed to tackle.
+						</p>
+
+						<div class="posts">
+							<article>
+								<h3>Spacecraft Inspection and Tracking</h3>
+								<p>Vision systems for identifying, localizing, and monitoring resident space objects in challenging lighting, geometry, and sensing conditions.</p>
+							</article>
+							<article>
+								<h3>Onboard and Low-SWaP Perception</h3>
+								<p>Models designed for edge deployment where power, memory, latency, and reliability constraints are central to system design.</p>
+							</article>
+							<article>
+								<h3>Deep 3D Reconstruction</h3>
+								<p>Learning-based reconstruction methods for sparse, uncertain, or motion-heavy imagery, with emphasis on physically meaningful scene recovery.</p>
+							</article>
+							<article>
+								<h3>LEO-to-GEO Simulation Environments</h3>
+								<p>Simulation and digital-twin-style environments for studying model behavior, autonomy, and mission-relevant perception tasks across orbital regimes.</p>
+							</article>
+							<article>
+								<h3>Entropy Flow and Latent Structure</h3>
+								<p>Research on how information and structure propagate through neural systems, and how regularization can shape interpretable, diverse, and transferable representations.</p>
+							</article>
+							<article>
+								<h3>Collaborative Applied ML</h3>
+								<p>Partner-driven projects where machine learning is adapted to scientific or engineering workflows that demand explanation, robustness, and practical constraints.</p>
+							</article>
+						</div>
+
+						<hr class="major" />
+
+						<h2 id="all-publications">All Publications</h2>
+						<p>
+							This page serves as both the research overview and the working publications hub for the lab. For the most complete and continuously updated list, see Google Scholar.
+						</p>
+
+						<ul class="actions">
+							<li><a href="https://scholar.google.com/citations?hl=en&user=SHsJP3cAAAAJ&view_op=list_works" class="button primary">Google Scholar</a></li>
+							<li><a href="https://orcid.org/0000-0002-5524-629X" class="button">ORCID</a></li>
+						</ul>
+					</section>
+
+				</div>
+			</div>
+
+			<div id="sidebar">
+				<div class="inner">
+
+					<nav id="menu">
+						<header class="major">
+							<h2>Menu</h2>
+						</header>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="about.html">About the Lab</a></li>
+							<li><a href="research.html">Research</a></li>
+							<li><a href="people.html">People</a></li>
+							<li><a href="join.html">Join the Lab</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+					</nav>
+
+					<section>
+						<header class="major">
+							<h2>Research Structure</h2>
+						</header>
+						<div class="mini-posts">
+							<article><p>Perception and autonomy in orbital environments.</p></article>
+							<article><p>Interpretability, neural representations, and mathematically informed ML.</p></article>
+							<article><p>Digital twin infrastructure, synthetic sensing, and partner-driven applied projects.</p></article>
+						</div>
+					</section>
+
+					<section>
+						<header class="major">
+							<h2>Get in touch</h2>
+						</header>
+						<p>For collaboration inquiries, student opportunities, or general questions about the lab, feel free to reach out.</p>
+						<ul class="contact">
+							<li class="icon solid fa-envelope"><a href="mailto:rwhite@fit.edu">rwhite@fit.edu</a></li>
+							<li class="icon solid fa-building">Florida Institute of Technology<br />Department of Mathematics and Systems Engineering<br />Melbourne, Florida</li>
+							<li class="icon solid fa-globe"><a href="https://www.fit.edu/faculty-profiles/w/white-ryan/">Florida Tech faculty profile</a></li>
+						</ul>
+					</section>
+
+					<footer id="footer">
+						<p class="copyright">&copy; 2026 NETS Lab. All rights reserved.</p>
+					</footer>
+
+				</div>
+			</div>
+
+		</div>
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
