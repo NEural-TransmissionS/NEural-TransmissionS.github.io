@@ -9,7 +9,7 @@
 		<title>NETS Lab | NEural TransmissionS Lab</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="NETS Lab studies space perception and autonomy, explainable AI and neural representations, and applied machine learning for scientific and engineering problems." />
+		<meta name="description" content="NETS Lab studies space perception and autonomy, explainable AI and neural representations, edge deployment, and applied machine learning for scientific and engineering problems." />
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body class="is-preload home-page">
@@ -61,15 +61,15 @@
 						</header>
 
 						<p>
-							The NEural TransmissionS (NETS) Lab builds machine learning systems for scientific and engineering problems where off-the-shelf methods break down. Our work focuses on computer vision, representation learning, and explainable AI, with an emphasis on understanding what models are actually learning—not just how well they perform.
+							The NEural TransmissionS (NETS) Lab builds machine learning systems for scientific and engineering problems where off-the-shelf methods break down. Our work focuses on computer vision, representation learning, and explainable AI, with an emphasis on understanding what models are actually learning and how to make those systems work under real operating constraints.
 						</p>
 
 						<p>
-							A central application area is space-based perception: enabling inspection, tracking, and 3D reconstruction of spacecraft in challenging orbital environments. These are safety-critical settings, where models must generalize reliably, be understood, and operate under strict computational constraints at deployment.
+							A central application area is space-based perception: enabling inspection, tracking, and 3D reconstruction of spacecraft in challenging orbital environments. These are safety-critical settings, where models must generalize reliably, be understood, and run onboard under strict power, memory, latency, and computational constraints, including low-SWaP deployment settings.
 						</p>
 
 						<p>
-							Work in the lab spans theory, modeling, and deployment, with students working alongside collaborators from government and defense labs, commercial partners, and academic groups across disciplines. Projects involve contributors from high school through PhD working on shared research problems.
+							Work in the lab spans theory, modeling, embedded implementation, and deployment, with students working alongside collaborators from government and defense labs, commercial partners, and academic groups across disciplines. Projects involve contributors from high school through PhD working on shared research problems.
 						</p>
 
 						<ul class="actions">
@@ -92,7 +92,7 @@
 								<div class="content">
 									<h3>Space Perception and Autonomy</h3>
 									<p>
-										Computer vision and learning systems for inspection, tracking, navigation, and 3D reconstruction of spacecraft in challenging orbital environments.
+										Computer vision and learning systems for inspection, tracking, navigation, and 3D reconstruction of spacecraft in challenging orbital environments, including onboard perception under flight-relevant constraints.
 									</p>
 								</div>
 							</article>
@@ -112,7 +112,7 @@
 								<div class="content">
 									<h3>Digital Twins and Sensing</h3>
 									<p>
-										Orbital digital twins, controllable synthetic sensor feeds, auto-annotation pipelines, and mixed real/sim experimental systems for rapid vision development.
+										Orbital digital twins, controllable synthetic sensor feeds, auto-annotation pipelines, and mixed real/sim experimental systems for rapid vision development and deployment testing.
 									</p>
 								</div>
 							</article>
@@ -122,7 +122,7 @@
 								<div class="content">
 									<h3>Scientific and Engineering ML</h3>
 									<p>
-										Collaborative machine learning projects in science and engineering, including applications in quantum biology, aviation meteorology, and other data-rich domains.
+										Collaborative machine learning projects in science and engineering, including applications in quantum biology, aviation meteorology, and other data-rich domains where edge and resource-aware models matter.
 									</p>
 								</div>
 							</article>
@@ -138,10 +138,10 @@
 						<div class="posts">
 
 							<article>
-								<a href="research.html#representative-projects" class="image"><img src="images/project-1.jpg" alt="Spacecraft inspection project preview" /></a>
+								<a href="research.html#representative-projects" class="image"><img src="images/objdetection.png" alt="Spacecraft inspection and object detection preview" /></a>
 								<h3>Vision for Spacecraft Inspection</h3>
 								<p>
-									Learning-based perception systems for identifying, localizing, and understanding spacecraft structure in operationally challenging visual conditions.
+									Learning-based spacecraft perception for inspection, tracking, and 3D reconstruction in operationally challenging visual conditions, with an emphasis on onboard and low-SWaP deployment.
 								</p>
 								<ul class="actions">
 									<li><a href="research.html#representative-projects" class="button">Learn More</a></li>
@@ -149,10 +149,10 @@
 							</article>
 
 							<article>
-								<a href="research.html#representative-projects" class="image"><img src="images/project-2.jpg" alt="Neural representations project preview" /></a>
+								<a href="research.html#representative-projects" class="image"><img src="images/entropy-guidance-home.png" alt="Entropy guidance diagram for controlling neural representations" /></a>
 								<h3>Controlling Neural Representations</h3>
 								<p>
-									Methods for shaping latent structure, entropy flow, and ensemble diversity so models learn representations that are more interpretable and more transferable.
+									Methods for shaping latent structure, entropy flow, and ensemble diversity so models learn representations that are more interpretable, more efficient, and more transferable across space AI and other domains.
 								</p>
 								<ul class="actions">
 									<li><a href="research.html#representative-projects" class="button">Learn More</a></li>
@@ -160,10 +160,14 @@
 							</article>
 
 							<article>
-								<a href="research.html#representative-projects" class="image"><img src="images/project-3.jpg" alt="Orbital simulation and reconstruction project preview" /></a>
+								<a href="research.html#representative-projects" class="image">
+									<video autoplay muted loop playsinline preload="metadata" aria-label="Orbital simulation and reconstruction project preview">
+										<source src="images/dte_sim_website.mp4" type="video/mp4" />
+									</video>
+								</a>
 								<h3>Orbital Simulation and 3D Reconstruction</h3>
 								<p>
-									Integrated simulation and reconstruction pipelines for studying perception and autonomy across LEO-to-GEO operating regimes.
+									Digital twin pipelines for mission planning, synthetic scenario generation, and large-scale synthetic training data with built-in auto-annotation under controlled orbital conditions across LEO-to-GEO regimes.
 								</p>
 								<ul class="actions">
 									<li><a href="research.html#representative-projects" class="button">Learn More</a></li>
@@ -179,7 +183,7 @@
 							<h2>Join the Lab</h2>
 						</header>
 						<p>
-							We welcome students and collaborators interested in machine learning, computer vision, space systems, scientific AI, and applied mathematics. If you are excited by rigorous, mission-driven research, we would be glad to hear from you.
+							We welcome students and collaborators interested in machine learning, computer vision, space systems, edge AI, scientific AI, and applied mathematics. If you are excited by rigorous, mission-driven research, we would be glad to hear from you.
 						</p>
 						<ul class="actions">
 							<li><a href="join.html" class="button primary">Learn More</a></li>
@@ -213,15 +217,7 @@
 
 					<!-- Quick Links -->
 					<section>
-						<header class="major">
-							<h2>Quick Links</h2>
-						</header>
 						<div class="mini-posts">
-
-							<article>
-								<a href="research.html#all-publications" class="image"><img src="images/publications-preview.jpg" alt="Publications preview" /></a>
-								<p>Browse recent publications and selected scholarly output from the lab.</p>
-							</article>
 
 							<article>
 								<a href="people.html" class="image"><img src="images/nets-people-preview.jpg" alt="NETS Lab group photo" /></a>
@@ -229,7 +225,6 @@
 							</article>
 
 							<article>
-								<a href="join.html" class="image"><img src="images/join-preview.jpg" alt="Join preview" /></a>
 								<p>Learn about opportunities for undergraduate, master's, and PhD students.</p>
 							</article>
 
@@ -257,7 +252,7 @@
 								Melbourne, Florida
 							</li>
 							<li class="icon solid fa-globe">
-								<a href="https://www.fit.edu/faculty-profiles/w/white-ryan/">Florida Tech faculty profile</a>
+								<a href="https://www.fit.edu/faculty-profiles/w/white-ryan/">Dr. White's Faculty Profile</a>
 							</li>
 						</ul>
 					</section>

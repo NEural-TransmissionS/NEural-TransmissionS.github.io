@@ -1784,7 +1784,8 @@ button,
     .posts article .image {
       display: block;
       margin: 0 0 2em 0; }
-      .posts article .image img {
+      .posts article .image img,
+      .posts article .image video {
         display: block;
         width: 100%; }
   @media screen and (min-width: 1681px) {
@@ -1844,6 +1845,9 @@ button,
           margin-bottom: 0; }
           .posts article:last-child:after {
             display: none; } }
+
+.posts.compact-projects article p {
+  min-height: calc(1.65em * 4); }
 
 /* Wrapper */
 #wrapper {
