@@ -186,3 +186,18 @@
 			}
 		}
 	}
+
+	.posts.featured-projects {
+		article {
+			.image {
+				aspect-ratio: 16 / 9;
+				overflow: hidden;
+
+				img,
+				video {
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+		}
+	}

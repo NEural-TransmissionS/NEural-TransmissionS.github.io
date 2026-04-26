@@ -1849,6 +1849,14 @@ button,
 .posts.compact-projects article p {
   min-height: calc(1.65em * 4); }
 
+.posts.featured-projects article .image {
+  aspect-ratio: 16 / 9;
+  overflow: hidden; }
+  .posts.featured-projects article .image img,
+  .posts.featured-projects article .image video {
+    height: 100%;
+    object-fit: cover; }
+
 /* Wrapper */
 #wrapper {
   display: -moz-flex;
