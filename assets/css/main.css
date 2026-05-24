@@ -2673,6 +2673,71 @@ button.primary:active,
   margin-top: 0;
 }
 
+.poster-landing-header {
+  max-width: 58rem;
+}
+
+.poster-kicker {
+  color: #f56a6a;
+  font-family: "Roboto Slab", serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin: 0 0 0.8rem 0;
+  text-transform: uppercase;
+}
+
+.poster-landing-header h1 {
+  font-size: clamp(2rem, 4.4vw, 4em);
+}
+
+.poster-authors {
+  color: #5d666d;
+  font-size: 1.05rem;
+  margin-top: -0.55rem;
+}
+
+.poster-landing-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(17rem, 0.8fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.poster-landing-copy > :last-child,
+.poster-info-panel > :last-child {
+  margin-bottom: 0;
+}
+
+.poster-info-panel {
+  padding: 1.35rem;
+  border: 1px solid rgba(210, 215, 217, 0.75);
+  background: rgba(230, 235, 237, 0.2);
+}
+
+.poster-info-panel h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.85rem;
+}
+
+.poster-resource-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.poster-resource-list li {
+  display: grid;
+  grid-template-columns: 1.4rem minmax(0, 1fr);
+  gap: 0.75rem;
+  margin: 0 0 1rem 0;
+}
+
+.poster-resource-list .icon {
+  color: #f56a6a;
+  line-height: 1.65;
+}
+
 .home-intro > header.major {
   margin-top: -0.45em;
   margin-bottom: 0;
@@ -2710,6 +2775,11 @@ button.primary:active,
   }
 
   .about-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .poster-landing-grid {
     grid-template-columns: 1fr;
     gap: 1.25rem;
   }
