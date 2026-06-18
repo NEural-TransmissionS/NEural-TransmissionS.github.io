@@ -50,7 +50,6 @@ const targetSwatch = document.querySelector("#targetSwatch");
 const outputSwatch = document.querySelector("#outputSwatch");
 const matchReadout = document.querySelector("#matchReadout");
 const channelHint = document.querySelector("#channelHint");
-const plainHint = document.querySelector("#plainHint");
 const successToast = document.querySelector("#successToast");
 const controlsEl = document.querySelector("#gaussianControls");
 const resetBtn = document.querySelector("#resetBtn");
@@ -398,7 +397,6 @@ function updateDemo() {
   matchReadout.textContent = `${Math.round(match)}%`;
   matchReadout.style.color = match >= 95 ? "#9dff7a" : "#f7fbff";
   channelHint.innerHTML = formatChannelHint(blend.output, targetColor);
-  plainHint.innerHTML = formatPlainHint(blend.output, targetColor);
   updateSuccessState(match);
 
   beamGroup.position.set(0, 0, 0);
@@ -617,21 +615,6 @@ function formatChannelHint(output, target) {
             ? `Need ${percent}% more ${label}`
             : `Too much ${label} by ${Math.abs(percent)}%`;
       return `<span style="--hint-color:${color}">${text}</span>`;
-    })
-    .join("");
-}
-
-function formatPlainHint(output, target) {
-  return [
-    { name: "Red", delta: output.r - target.r },
-    { name: "Green", delta: output.g - target.g },
-    { name: "Blue", delta: output.b - target.b },
-  ]
-    .map((miss) => {
-      const amount = Math.round(Math.abs(miss.delta) * 100);
-      if (amount <= 5) return `<span>${miss.name}: right amount</span>`;
-      const direction = miss.delta > 0 ? "too high" : "too low";
-      return `<span>${miss.name}: ${amount}% ${direction}</span>`;
     })
     .join("");
 }

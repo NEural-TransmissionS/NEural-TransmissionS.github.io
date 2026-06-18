@@ -124,25 +124,7 @@ input {
   white-space: nowrap;
 }
 
-.plain-hint {
-  grid-column: 1 / -1;
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 0.85rem;
-  min-height: 1.2rem;
-  color: #f4fbff;
-  font-size: 0.78rem;
-  font-weight: 650;
-  line-height: 1.25;
-}
-
-.plain-hint span {
-  min-width: 0;
-  white-space: nowrap;
-}
-
-.channel-hint:empty,
-.plain-hint:empty {
+.channel-hint:empty {
   display: none;
 }
 
@@ -256,6 +238,7 @@ h1 {
   font-size: 1.15rem;
   line-height: 1.15;
   letter-spacing: 0;
+  margin-bottom: 0.85rem;
 }
 
 h2 {
@@ -446,13 +429,4 @@ input[type="color"] {
     font-size: 0.78rem;
   }
 
-  .plain-hint {
-    flex-direction: column;
-    gap: 0.25rem;
-    font-size: 0.78rem;
-  }
-
-  .plain-hint span {
-    white-space: normal;
-  }
 }
