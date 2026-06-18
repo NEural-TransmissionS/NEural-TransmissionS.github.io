@@ -41,17 +41,18 @@
       </section>
 
       <section class="lesson-notes" aria-label="How this demo works">
-        <h2>How the light gets its color</h2>
+        <h2>Why this matters for AI 3D modeling</h2>
         <p>
-          A 3D Gaussian is like a soft glowing blob in space. A camera ray flies
-          through the blobs on its way to one pixel. When the ray leaves a blob,
-          it picks up color from the spot where it comes out.
+          AI-based 3D modeling methods, including 3D Gaussian Splatting, can
+          represent a scene as many soft, colored blobs in space instead of only
+          hard surfaces. A camera view is made by looking through those blobs and
+          blending what they contribute.
         </p>
         <p>
-          Your job is to shape, turn, and recolor the blobs until the ray comes
-          out matching the target. The ray disappears inside each blob, then
-          reappears with its new color so you can see the pixel being built step
-          by step.
+          This demo turns that idea into a small color challenge: adjust the
+          blobs until the final pixel matches the target. It is a simplified
+          picture of how learned 3D scenes can turn position, shape, and color
+          into an image from a chosen viewpoint.
         </p>
       </section>
 
