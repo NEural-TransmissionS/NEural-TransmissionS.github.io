@@ -130,7 +130,9 @@ let dragMode = null;
 let activeGaussian = null;
 
 const splatPositions = [-3.2, 0, 3.2];
+const splatLabels = ["left blob", "center blob", "right blob"];
 const splats = [];
+const labels = [];
 const beamMeshes = [];
 let arrowMesh = null;
 let exitHalo = null;
@@ -177,6 +179,7 @@ function buildControls() {
         <div class="gaussian-title">
           <span class="dot"></span>
           <span>${gaussian.name}</span>
+          <span class="blob-position">${splatLabels[index]}</span>
         </div>
         <input type="color" value="${gaussian.color}" aria-label="${gaussian.name} base color" data-field="color" data-index="${index}" />
       </div>
@@ -262,9 +265,13 @@ function buildSceneObjects() {
     mesh.userData.dragType = "gaussian";
     mesh.userData.index = index;
 
-    group.add(mesh);
+    const label = createNumberLabel(index + 1, state.gaussians[index].color);
+    label.position.set(0, 1.45, 0);
+
+    group.add(mesh, label);
     gaussianRoot.add(group);
     splats.push({ group, mesh });
+    labels.push(label);
   });
 
   for (let index = 0; index < state.gaussians.length + 1; index += 1) {
@@ -385,6 +392,7 @@ function updateDemo() {
     splat.group.scale.set(gaussian.scale.x, gaussian.scale.y, gaussian.scale.z);
     splat.mesh.material.opacity = 0.96 + gaussian.alpha * 0.04;
     updateSurfaceColors(splat.mesh.geometry, gaussian, index);
+    updateNumberLabel(labels[index], index + 1, gaussian.color);
   });
 
   const blend = blendGaussians(state.gaussians);
@@ -617,6 +625,62 @@ function formatChannelHint(output, target) {
       return `<span style="--hint-color:${color}">${text}</span>`;
     })
     .join("");
+}
+
+function createNumberLabel(number, color) {
+  const texture = makeNumberTexture(number, color);
+  const sprite = new THREE.Sprite(
+    new THREE.SpriteMaterial({
+      map: texture,
+      transparent: true,
+      depthTest: false,
+      depthWrite: false,
+    }),
+  );
+  sprite.scale.set(0.54, 0.54, 1);
+  sprite.renderOrder = 10;
+  sprite.userData.number = number;
+  sprite.userData.color = color;
+  sprite.userData.texture = texture;
+  return sprite;
+}
+
+function updateNumberLabel(sprite, number, color) {
+  if (!sprite || (sprite.userData.number === number && sprite.userData.color === color)) return;
+
+  const oldTexture = sprite.material.map;
+  const texture = makeNumberTexture(number, color);
+  sprite.material.map = texture;
+  sprite.material.needsUpdate = true;
+  if (oldTexture) oldTexture.dispose();
+  sprite.userData.number = number;
+  sprite.userData.color = color;
+  sprite.userData.texture = texture;
+}
+
+function makeNumberTexture(number, color) {
+  const canvas = document.createElement("canvas");
+  canvas.width = 96;
+  canvas.height = 96;
+  const context = canvas.getContext("2d");
+  context.clearRect(0, 0, canvas.width, canvas.height);
+  context.fillStyle = "rgba(8, 11, 20, 0.82)";
+  context.strokeStyle = color;
+  context.lineWidth = 6;
+  context.beginPath();
+  context.arc(48, 48, 34, 0, Math.PI * 2);
+  context.fill();
+  context.stroke();
+  context.fillStyle = "#f7fbff";
+  context.font = "700 44px Inter, system-ui, sans-serif";
+  context.textAlign = "center";
+  context.textBaseline = "middle";
+  context.fillText(String(number), 48, 50);
+
+  const texture = new THREE.CanvasTexture(canvas);
+  texture.colorSpace = THREE.SRGBColorSpace;
+  texture.needsUpdate = true;
+  return texture;
 }
 
 function updateSuccessState(match) {

@@ -312,6 +312,12 @@ input[type="color"] {
   font-weight: 750;
 }
 
+.blob-position {
+  color: #8fa8b5;
+  font-size: 0.74rem;
+  font-weight: 700;
+}
+
 .dot {
   width: 0.75rem;
   height: 0.75rem;
