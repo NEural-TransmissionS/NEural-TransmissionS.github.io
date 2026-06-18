@@ -623,15 +623,15 @@ function formatChannelHint(output, target) {
 
 function formatPlainHint(output, target) {
   return [
-    { name: "red", delta: output.r - target.r },
-    { name: "green", delta: output.g - target.g },
-    { name: "blue", delta: output.b - target.b },
+    { name: "Red", delta: output.r - target.r },
+    { name: "Green", delta: output.g - target.g },
+    { name: "Blue", delta: output.b - target.b },
   ]
     .map((miss) => {
       const amount = Math.round(Math.abs(miss.delta) * 100);
-      if (amount <= 5) return `<span>Your output color has the right amount of ${miss.name}.</span>`;
-      const direction = miss.delta > 0 ? "too much" : "not enough";
-      return `<span>Your output color has ${amount}% ${direction} ${miss.name}.</span>`;
+      if (amount <= 5) return `<span>${miss.name}: right amount</span>`;
+      const direction = miss.delta > 0 ? "too high" : "too low";
+      return `<span>${miss.name}: ${amount}% ${direction}</span>`;
     })
     .join("");
 }
