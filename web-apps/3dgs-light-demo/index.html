@@ -50,15 +50,26 @@
         <p>
           That same basic idea is part of 3D Gaussian Splatting: many soft,
           colored blobs work together to generate 2D images of 3D objects from a
-          camera view.
+          camera view. It is also a tiny example of raytracing: following a path
+          of light through a 3D world to decide what a pixel should look like.
+        </p>
+        <p>
+          Ideas like this show up across graphics, robotics, and space systems,
+          including games, terrain-relative navigation on the Moon, satellite
+          inspection, digital twins, and synthetic training data.
         </p>
       </section>
 
       <aside class="controls" aria-label="Gaussian controls">
         <div class="top-row">
-          <h1>Pixel Color Challenge</h1>
+          <a class="lab-link" href="../../index.html" aria-label="NETS Lab website">
+            <img src="../../images/NETS_brain_2_logo_tran.png" alt="" />
+            <span>NETS Lab</span>
+          </a>
           <button id="resetBtn" type="button" title="Reset demo">Reset</button>
         </div>
+
+        <h1>Pixel Color Challenge</h1>
 
         <input id="targetColor" type="color" value="#36d399" disabled hidden />
 
