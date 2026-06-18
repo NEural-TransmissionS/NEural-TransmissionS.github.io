@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D Gaussian Light Mixer</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.165.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.165.0/examples/jsm/"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="stage" aria-label="3D Gaussian light propagation demo">
+        <div id="scene" class="scene"></div>
+        <div class="target-strip">
+          <div class="swatch-block">
+            <span>Goal color</span>
+            <div id="targetSwatch" class="swatch"></div>
+          </div>
+          <div class="swatch-block">
+            <span>Your pixel</span>
+            <div id="outputSwatch" class="swatch"></div>
+          </div>
+          <div class="score-block">
+            <span>Color match</span>
+            <strong id="matchReadout">0%</strong>
+          </div>
+          <button id="puzzleBtn" type="button">New Puzzle</button>
+          <div id="channelHint" class="channel-hint" aria-label="RGB channel hints"></div>
+          <div id="plainHint" class="plain-hint"></div>
+        </div>
+        <div id="successToast" class="success-toast" role="status" aria-live="polite">
+          Success: within 5%
+        </div>
+      </section>
+
+      <section class="lesson-notes" aria-label="How this demo works">
+        <h2>How the light gets its color</h2>
+        <p>
+          A 3D Gaussian is like a soft glowing blob in space. A camera ray flies
+          through the blobs on its way to one pixel. When the ray leaves a blob,
+          it picks up color from the spot where it comes out.
+        </p>
+        <p>
+          Your job is to shape, turn, and recolor the blobs until the ray comes
+          out matching the target. The ray disappears inside each blob, then
+          reappears with its new color so you can see the pixel being built step
+          by step.
+        </p>
+      </section>
+
+      <aside class="controls" aria-label="Gaussian controls">
+        <div class="top-row">
+          <h1>Pixel Color Challenge</h1>
+          <button id="resetBtn" type="button" title="Reset demo">Reset</button>
+        </div>
+
+        <input id="targetColor" type="color" value="#36d399" disabled hidden />
+
+        <div id="gaussianControls" class="gaussian-list"></div>
+      </aside>
+    </main>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
