@@ -390,7 +390,7 @@ function updateDemo() {
       gaussian.rotation.z,
     );
     splat.group.scale.set(gaussian.scale.x, gaussian.scale.y, gaussian.scale.z);
-    splat.mesh.material.opacity = 0.96 + gaussian.alpha * 0.04;
+    splat.mesh.material.opacity = 0.12 + gaussian.alpha * 0.78;
     updateSurfaceColors(splat.mesh.geometry, gaussian, index);
     updateNumberLabel(labels[index], index + 1, gaussian.color);
   });
