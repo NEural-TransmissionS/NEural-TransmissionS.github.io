@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Build AI With Florida Tech</title>
+    <meta
+      name="description"
+      content="Connect with Florida Tech on AI: internships, sponsored projects, research collaboration, and more."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <!-- Form logic + backend URL live in src/. See README.md for the submission interface. -->
+    <script type="module" src="./src/main.js"></script>
+  </head>
+  <body>
+    <main class="page">
+      <header class="intro">
+        <p class="eyebrow">Florida Tech &middot; Artificial Intelligence</p>
+        <h1>Let&rsquo;s build AI together</h1>
+        <p class="lead">
+          Tell us how you&rsquo;d like to work with Florida Tech students and researchers on AI.
+          It takes about a minute, and we&rsquo;ll follow up with you personally.
+        </p>
+      </header>
+
+      <form id="connectForm" class="card" novalidate>
+        <fieldset class="group">
+          <legend>About you</legend>
+          <div class="grid">
+            <label class="field">
+              <span>Name <em aria-hidden="true">*</em></span>
+              <input name="name" type="text" autocomplete="name" required maxlength="200" />
+            </label>
+            <label class="field">
+              <span>Email <em aria-hidden="true">*</em></span>
+              <input name="email" type="email" autocomplete="email" required maxlength="200" />
+            </label>
+            <label class="field">
+              <span>Organization</span>
+              <input name="organization" type="text" autocomplete="organization" maxlength="200" />
+            </label>
+            <label class="field">
+              <span>Role / title</span>
+              <input name="role" type="text" autocomplete="organization-title" maxlength="200" />
+            </label>
+            <label class="field">
+              <span>Phone <small>(optional)</small></span>
+              <input name="phone" type="tel" autocomplete="tel" maxlength="50" />
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="group">
+          <legend>I&rsquo;m interested in&hellip; <small>(check any)</small></legend>
+          <!-- Values are written verbatim into the Sheet's "Interests" column; edit freely. -->
+          <div class="choices">
+            <label class="choice"><input type="checkbox" name="interests" value="Hiring interns or graduates" /><span>Hiring interns or graduates with AI skills</span></label>
+            <label class="choice"><input type="checkbox" name="interests" value="Sponsoring a student project" /><span>Sponsoring a student or capstone project</span></label>
+            <label class="choice"><input type="checkbox" name="interests" value="Bringing a problem or dataset" /><span>Bringing a real problem or dataset</span></label>
+            <label class="choice"><input type="checkbox" name="interests" value="Research collaboration" /><span>Research collaboration or joint proposals</span></label>
+            <label class="choice"><input type="checkbox" name="interests" value="Guest lecturing or mentoring" /><span>Guest lecturing or mentoring students</span></label>
+            <label class="choice"><input type="checkbox" name="interests" value="High-performance computing" /><span>High-performance computing resources</span></label>
+            <label class="choice"><input type="checkbox" name="interests" value="AI training for my team" /><span>AI training for my team</span></label>
+            <label class="choice"><input type="checkbox" name="interests" value="Something else" /><span>Something else</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="group">
+          <legend>Tell us more</legend>
+          <label class="field">
+            <span>What&rsquo;s one AI challenge or opportunity in your organization?</span>
+            <textarea name="challenge" rows="3" maxlength="2000"></textarea>
+          </label>
+          <label class="field">
+            <span>Anything else?</span>
+            <textarea name="notes" rows="2" maxlength="2000"></textarea>
+          </label>
+        </fieldset>
+
+        <!-- Honeypot: hidden from people; bots that fill it are silently dropped server-side. -->
+        <div class="hp" aria-hidden="true">
+          <label>Website <input name="website" type="text" tabindex="-1" autocomplete="off" /></label>
+        </div>
+        <!-- Filled from the ?src= query param (e.g. the QR code on a slide) so you can tell events apart. -->
+        <input type="hidden" name="source" value="direct" />
+
+        <p id="formError" class="error" role="alert" hidden></p>
+        <button id="submitBtn" type="submit" class="submit">Send</button>
+        <p class="fineprint">We&rsquo;ll use this only to follow up with you.</p>
+      </form>
+
+      <section id="thanks" class="card thanks" tabindex="-1" hidden>
+        <h2>Thank you!</h2>
+        <p>We&rsquo;ve got your note and will be in touch soon.</p>
+        <p>
+          Can&rsquo;t wait? Email
+          <a href="mailto:rwhite@fit.edu">Dr. Ryan White</a>.
+        </p>
+      </section>
+
+      <footer class="footer">
+        <p>
+          Questions? <a href="mailto:rwhite@fit.edu">rwhite@fit.edu</a> &middot;
+          <a href="../../index.html">NETS Lab</a> &middot; Florida Institute of Technology
+        </p>
+      </footer>
+    </main>
+  </body>
+</html>
