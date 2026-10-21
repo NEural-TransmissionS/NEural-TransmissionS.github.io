@@ -20,7 +20,7 @@ const SHEET_NAME = 'Responses';
 
 // Set to an address (e.g. 'rwhite@fit.edu') to get an email for every submission.
 // Empty string disables notifications. Free accounts can send 100 emails/day.
-const NOTIFY_EMAIL = '';
+const NOTIFY_EMAIL = 'rwhite@fit.edu';
 
 const HEADERS = [
   'Timestamp', 'Name', 'Organization', 'Role', 'Email', 'Phone',
