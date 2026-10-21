@@ -65,7 +65,15 @@ function doPost(e) {
       lock.releaseLock();
     }
 
-    if (NOTIFY_EMAIL) notify_(row, email);
+    // The row is already saved, so a failed email must not turn into an error for the
+    // visitor. Failures show up under Executions in the Apps Script editor.
+    if (NOTIFY_EMAIL) {
+      try {
+        notify_(row, email);
+      } catch (mailErr) {
+        console.error('Notification email failed:', mailErr);
+      }
+    }
     return json_({ ok: true });
   } catch (err) {
     console.error(err);
